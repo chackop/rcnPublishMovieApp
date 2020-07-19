@@ -14,12 +14,19 @@ type Props = {
   image: any,
   title: string,
   year: number,
+  plot: string,
+  onPress: Function,
 };
-type State = void;
 
-class MovieCell extends React.Component<Props, State> {
+class MovieCell extends React.Component<Props> {
   _onPress = () => {
-    Alert.alert('Cell pressed', `Movie ${this.props.title}`);
+    // Alert.alert('Cell pressed', `Movie ${this.props.title}`)
+    this.props.onPress({
+      title: this.props.title,
+      image: this.props.image,
+      year: this.props.year,
+      plot: this.props.plot,
+    });
   };
 
   render() {
