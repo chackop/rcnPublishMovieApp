@@ -1,10 +1,11 @@
 /* @flow */
 
-import {StackNavigator} from 'react-navigation';
+import {createAppContainer} from 'react-navigation';
+import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
 import MoviesList from '../Components/MoviesList';
 import MovieDetail from '../Components/MovieDetail';
 
-const RootNavigator = StackNavigator({
+const RootNavigator = createMaterialTopTabNavigator({
   MoviesList: {
     screen: MoviesList,
     navigationOptions: {
@@ -24,4 +25,4 @@ const RootNavigator = StackNavigator({
   },
 });
 
-export default RootNavigator;
+export default createAppContainer(RootNavigator);

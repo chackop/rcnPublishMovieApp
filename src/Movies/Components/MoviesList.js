@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import { getMovies, getMoviesDismiss } from '../Actions/GetMoviesActions'
 
 import MovieCell from './MovieCell'
-import MovieInfo from './MovieInfo'
 
 class MoviesList extends Component<{}> {
   componentDidMount() {

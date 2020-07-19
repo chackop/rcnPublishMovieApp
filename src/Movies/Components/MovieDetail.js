@@ -5,7 +5,7 @@ import { ScrollView, StyleSheet } from 'react-native'
 import MoviePoster from './MoviePoster'
 import MovieTitle from './MovieTitle'
 import MovieYear from './MovieYear'
-import MoviePlot from './MoviePlot'
+import MovieInfo from './MovieInfo'
 
 class MovieDetail extends React.Component<{}> {
   static navigationOptions = ({ navigation, screenProps }) => ({
@@ -18,7 +18,7 @@ class MovieDetail extends React.Component<{}> {
         <MoviePoster source={this.props.navigation.state.params.image} />
         <MovieTitle title={this.props.navigation.state.params.title} />
         <MovieYear year={this.props.navigation.state.params.year} />
-        <MoviePlot plot={this.props.navigation.state.params.plot} />
+        <MovieInfo body={this.props.navigation.state.params.plot} />
       </ScrollView>
     )
   }

@@ -1,6 +1,6 @@
 /* @flow */
 
-import {fork, all} from 'redux-saga/effects';
+import { fork, all } from 'redux-saga/effects';
 import getMoviesSaga from './Movies/Sagas/GetMoviesSaga';
 
 function* rootSaga() {

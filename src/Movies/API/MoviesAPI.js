@@ -8,4 +8,4 @@ function getMoviesAPI() {
 
 // Assignment, getMoviesDetailAPI
 
-export {getMoviesAPI};
+export { getMoviesAPI };

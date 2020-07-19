@@ -10,7 +10,7 @@ class APIWrapper {
   get(url, params) {
     // Assignment, handle params
     return fetch(`${this._apiURL}${url}`, {
-      method: 'GET',
+      method: 'GET'
     }).then(this._parseResponse);
   }
 

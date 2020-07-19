@@ -2,27 +2,27 @@
 
 const getMovies: Function = (): Object => ({
   type: 'GET_MOVIES',
-  payload: {},
+  payload: {}
 });
 
 const getMoviesSuccess: Function = (response: Object): Object => ({
   type: 'GET_MOVIES_SUCCESS',
   payload: {
-    movies: response,
-  },
+    movies: response
+  }
 });
 
 const getMoviesError: Function = (error: Error): Object => ({
   type: 'GET_MOVIES_ERROR',
   payload: {
-    errorMessage: error.message,
+    errorMessage: error.message
   },
-  error: true,
+  error: true
 });
 
 const getMoviesDismiss: Function = (): Object => ({
   type: 'GET_MOVIES_DISMISS',
-  payload: {},
+  payload: {}
 });
 
-export {getMovies, getMoviesSuccess, getMoviesError, getMoviesDismiss};
+export { getMovies, getMoviesSuccess, getMoviesError, getMoviesDismiss };

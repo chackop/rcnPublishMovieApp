@@ -3,12 +3,7 @@
 import React from 'react'
 import { Text, StyleSheet } from 'react-native'
 
-const styles = StyleSheet.create({
-  body: {
-    fontFamily: 'Avenir Next',
-    color: '#999'
-  }
-})
+const styles = StyleSheet.create({})
 
 export default function(props: { body: string, style?: any }) {
   return (
