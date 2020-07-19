@@ -1,16 +1,16 @@
 /* @flow */
 
-import React from 'react'
-import { ScrollView, StyleSheet } from 'react-native'
-import MoviePoster from './MoviePoster'
-import MovieTitle from './MovieTitle'
-import MovieYear from './MovieYear'
-import MovieInfo from './MovieInfo'
+import React from 'react';
+import {ScrollView, StyleSheet} from 'react-native';
+import MoviePoster from './MoviePoster';
+import MovieTitle from './MovieTitle';
+import MovieYear from './MovieYear';
+import MovieInfo from './MovieInfo';
 
 class MovieDetail extends React.Component<{}> {
-  static navigationOptions = ({ navigation, screenProps }) => ({
-    title: navigation.state.params.title
-  })
+  static navigationOptions = ({navigation, screenProps}) => ({
+    title: navigation.state.params.title || {},
+  });
 
   render() {
     return (
@@ -20,15 +20,15 @@ class MovieDetail extends React.Component<{}> {
         <MovieYear year={this.props.navigation.state.params.year} />
         <MovieInfo body={this.props.navigation.state.params.plot} />
       </ScrollView>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10
-  }
-})
+    padding: 10,
+  },
+});
 
-export default MovieDetail
+export default MovieDetail;

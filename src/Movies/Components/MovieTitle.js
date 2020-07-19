@@ -1,18 +1,18 @@
 /* @flow */
 
-import React from 'react'
-import { Text, Animated, StyleSheet } from 'react-native'
+import React from 'react';
+import {Text, Animated, StyleSheet} from 'react-native';
 
 type Props = {
-  title: string
-}
+  title?: string,
+};
 
 class MovieTitle extends React.PureComponent<Props> {
-  _opacity: Animated.Value
+  _opacity: Animated.Value;
 
   constructor(props: Props) {
-    super(props)
-    this._opacity = new Animated.Value(0)
+    super(props);
+    this._opacity = new Animated.Value(0);
   }
 
   componentDidMount() {
@@ -20,16 +20,16 @@ class MovieTitle extends React.PureComponent<Props> {
       delay: 300,
       duration: 500,
       toValue: 1,
-      useNativeDriver: true
-    }).start()
+      useNativeDriver: true,
+    }).start();
   }
 
   render() {
     return (
-      <Animated.View style={{ opacity: this._opacity }}>
+      <Animated.View style={{opacity: this._opacity}}>
         <Text style={styles.title}>{this.props.title}</Text>
       </Animated.View>
-    )
+    );
   }
 }
 
@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingHorizontal: 5,
     fontWeight: 'bold',
-    fontSize: 24
-  }
-})
+    fontSize: 24,
+  },
+});
 
-export default MovieTitle
+export default MovieTitle;
